@@ -1,17 +1,59 @@
 # Eddie Zhou
 
-I build focused tools for making agentic software work easier to govern, verify, and resume.
+**English** | [简体中文](https://github.com/junwei529/junwei529/blob/main/README.zh-CN.md)
 
-This profile is a navigation hub for five independently governed projects. Each project owns its source and lifecycle, including its own versioning and release decisions where applicable; this repository does not bundle or install them.
+**Practical tools for AI-assisted software delivery.**
 
-## Projects
+I build tools around the everyday challenges of working with AI agents:
+keeping projects moving across conversations, making responsibilities clear,
+keeping documentation useful, and getting commands to execute correctly.
 
-- [manage-project-docs](https://github.com/junwei529/manage-project-docs) — **Released: v0.3.0.** A Codex Skill for auditing, adopting, maintaining, and recovering project documentation without inventing authority.
-- [work-charter](https://github.com/junwei529/work-charter) — **Released: v0.3.0.** A Codex Skill for bounding consequential work by outcome, authority, evidence, recovery, and proportional coordination.
-- [use-powershell-safely](https://github.com/junwei529/use-powershell-safely) — **Released: v0.3.0.** A Codex Skill for diagnosing and safely executing boundary-sensitive Windows shell workflows across PowerShell, native executables, and WSL.
-- [session-coordinator-dsh](https://github.com/junwei529/session-coordinator-dsh) — **[Pre-release: v0.1.1-alpha.1](https://github.com/junwei529/session-coordinator-dsh/releases/tag/v0.1.1-alpha.1).** An MIT-licensed external DeepSeek Harness plugin for Workstream identity and cross-Session coordination. Its public source and GitHub pre-release are available; the npm package remains private and unpublished.
-- [work-charter-dsh](https://github.com/junwei529/work-charter-dsh) — **[Pre-release: v0.1.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.1.0-alpha.1).** An MIT-licensed external DeepSeek Harness plugin that adapts Work Charter policy semantics through a Host policy service and read-only browser surfaces. Its public source and GitHub pre-release are available; the npm package remains private and unpublished.
+## Featured Codex Skills
 
-## Relationship
+### [Work Charter](https://github.com/junwei529/work-charter)
+**Keep complex AI projects moving through to delivery.**
 
-`work-charter-dsh` relies on `session-coordinator-dsh` for Workstream identity, Session addressing, cross-Session coordination transport/state, and recovery. They remain separate projects with independent source, versions, releases, status, and verification; this relationship does not aggregate source, install dependencies implicitly, or claim a broad compatibility range.
+Five collaboration levels, L0–L4, help organize work from a single task
+to a project spanning multiple phases. Clear roles cover coordination,
+planning, execution, and independent review.
+
+Model and reasoning defaults are configurable. They are informed by my
+private evaluations built from real repositories and tailored to each
+role's responsibilities.
+
+### [Project Docs](https://github.com/junwei529/manage-project-docs)
+**Keep documentation in step with the project.**
+
+Audit, organize, maintain, and recover project documentation.
+Clarify where decisions and current state belong, preserve useful existing
+structures, and help documentation evolve with the software it describes.
+
+### [Use PowerShell Safely](https://github.com/junwei529/use-powershell-safely)
+**Help AI agents get Windows commands right.**
+
+Handle the practical boundaries between PowerShell, native executables,
+text encoding, paths, and WSL. Diagnose failures and verify what a command
+actually completed.
+
+## DeepSeek Harness Plugins
+
+- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
+  — Connect related sessions, preserve coordination records, and support
+  recovery after interruptions.
+- [Work Charter for DSH](https://github.com/junwei529/work-charter-dsh)
+  — Bring Work Charter's roles, decisions, evidence, and recovery model
+  into DeepSeek Harness, using Session Coordinator for cross-session
+  coordination.
+
+Both plugins currently have public GitHub pre-releases.
+Installation instructions and compatibility details live in their repositories.
+
+## How I Build
+
+- Start with recurring problems in real projects.
+- Keep tools focused and responsibilities clear.
+- Make results verifiable and interrupted work recoverable.
+- Evaluate defaults, then refine them through actual use.
+
+Each project is maintained independently. Visit its repository for
+documentation, source, releases, and current status.
