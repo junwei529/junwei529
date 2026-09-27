@@ -41,16 +41,19 @@ actually completed.
 
 ## DeepSeek Harness Plugins
 
-- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
-  — Connect related sessions, preserve coordination records, and support
-  recovery after interruptions.
 - [Work Charter for DSH](https://github.com/junwei529/work-charter-dsh)
-  — Bring Work Charter's roles, decisions, evidence, and recovery model
-  into DeepSeek Harness, using Session Coordinator for cross-session
-  coordination.
+  — Bring Work Charter 0.9.1's Direct, Team and Phased arrangements,
+  review, acceptance and recovery to native DSH Teams.
+  [v0.2.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.2.0-alpha.1)
+  removes the separate Session Coordinator runtime dependency.
+- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
+  — Retired and archived. Source and old releases remain available for
+  historical profiles; it is no longer a dependency for new WCDP profiles.
 
-Both plugins currently have public GitHub pre-releases.
-Installation instructions and compatibility details live in their repositories.
+WCDP remains a GitHub pre-release targeting DSH 0.1.7-rc.2.
+Its collaboration scope is one native Team; it does not replace arbitrary
+cross-Session coordination. Use fresh profiles/stores and consult the
+repository for installation steps and verification limits.
 
 ## How I Build
 
@@ -59,5 +62,6 @@ Installation instructions and compatibility details live in their repositories.
 - Make results verifiable and interrupted work recoverable.
 - Evaluate defaults, then refine them through actual use.
 
-Each project is maintained independently. Visit its repository for
+Active projects are maintained independently. Visit its repository for
 documentation, source, releases, and current status.
+

@@ -37,14 +37,18 @@
 
 ## DeepSeek Harness 插件
 
-- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
-  ——关联相关会话，保存协作记录，支持工作中断后的恢复。
 - [Work Charter for DSH](https://github.com/junwei529/work-charter-dsh)
-  ——把 Work Charter 的角色、决定、证据和恢复机制带入 DeepSeek Harness，
-  并使用 Session Coordinator 完成跨会话协作。
+  ——基于 DSH 原生 Team，提供 Work Charter 0.9.1 的 Direct、Team、Phased
+  安排，以及审查、验收和恢复机制。
+  [v0.2.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.2.0-alpha.1)
+  已移除独立的 Session Coordinator 运行依赖。
+- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
+  ——已退役并归档。保留源码和旧 release，供历史 profile 查阅与恢复；
+  新 WCDP profile 不再依赖它。
 
-两个插件目前均有公开的 GitHub 预发布版本。
-安装方法与兼容性说明见各自仓库。
+WCDP 仍为 GitHub 预发布版本，目标 DSH 为 0.1.7-rc.2。
+协作范围限于同一原生 Team，不代表任意独立 Session 的跨会话协调已被替代。
+请使用新的 profile/store，安装步骤与验证限制见项目仓库。
 
 ## 我的开发方式
 
@@ -53,4 +57,5 @@
 - 让结果可以验证，让中断的工作能够恢复。
 - 通过评测确定默认方案，再根据实际使用持续调整。
 
-每个项目独立维护。文档、源码、发布信息和当前状态请查看对应仓库。
+活跃项目独立维护。文档、源码、发布信息和当前状态请查看对应仓库。
+
