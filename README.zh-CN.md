@@ -13,11 +13,14 @@
 ### [Work Charter](https://github.com/junwei529/work-charter)
 **让复杂的 AI 项目接得住，也交得出。**
 
-提供 L0–L4 五档协作方案，覆盖从单次任务到多阶段项目的工作需要。
-通过清晰的角色分工，组织项目统筹、规划、执行和独立审阅。
+通过关于成果、真实约束、独立审查、恢复和自主推进范围的条件式问答，
+选择 **Direct、Team 或 Phased** 工作方式。
 
-默认模型与推理等级可以自由调整。这些默认值依据我的私有评测结果设置；
-评测集来自实际代码仓库，并针对各角色的职责分别设计。
+保持执行与审查独立，在相关工作间复用可靠 Reviewer，让授权内修复连续推进，
+减少重复审批。模型与推理档位可按实际职责和工作方式配置。
+
+[**v0.9.1**](https://github.com/junwei529/work-charter/releases/tag/v0.9.1)
+支持在稳定工作节点明确迁移，同时保留既有批准、findings、预算和冻结模型设置。
 
 ### [Project Docs](https://github.com/junwei529/manage-project-docs)
 **让项目文档跟得上项目。**

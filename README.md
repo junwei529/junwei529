@@ -13,13 +13,17 @@ keeping documentation useful, and getting commands to execute correctly.
 ### [Work Charter](https://github.com/junwei529/work-charter)
 **Keep complex AI projects moving through to delivery.**
 
-Five collaboration levels, L0–L4, help organize work from a single task
-to a project spanning multiple phases. Clear roles cover coordination,
-planning, execution, and independent review.
+Choose **Direct, Team, or Phased** work through questions about the outcome,
+real constraints, independent review, recovery, and how far work may proceed
+without further user decisions.
 
-Model and reasoning defaults are configurable. They are informed by my
-private evaluations built from real repositories and tailored to each
-role's responsibilities.
+Keep execution and review independent, reuse a reliable Reviewer across
+related work, and let authorized repairs continue without repeated approval.
+Model and reasoning defaults are configurable by responsibility and arrangement.
+
+[**v0.9.1**](https://github.com/junwei529/work-charter/releases/tag/v0.9.1)
+adds explicit migration at stable work checkpoints while preserving existing
+approvals, findings, budgets, and frozen model settings.
 
 ### [Project Docs](https://github.com/junwei529/manage-project-docs)
 **Keep documentation in step with the project.**
