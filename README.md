@@ -13,17 +13,19 @@ keeping documentation useful, and getting commands to execute correctly.
 ### [Work Charter](https://github.com/junwei529/work-charter)
 **Keep complex AI projects moving through to delivery.**
 
-Choose **Direct, Team, or Phased** work through questions about the outcome,
-real constraints, independent review, recovery, and how far work may proceed
-without further user decisions.
+Start with **Direct**: one Deliverer carries the work through to delivery.
+Use **Phased** when several workstreams need shared goals and priorities;
+choose **Team** when separate planning and execution bring a concrete benefit.
 
 Keep execution and review independent, reuse a reliable Reviewer across
 related work, and let authorized repairs continue without repeated approval.
 Model and reasoning defaults are configurable by responsibility and arrangement.
 
-[**v0.9.1**](https://github.com/junwei529/work-charter/releases/tag/v0.9.1)
-adds explicit migration at stable work checkpoints while preserving existing
-approvals, findings, budgets, and frozen model settings.
+[**v0.10.2**](https://github.com/junwei529/work-charter/releases/tag/v0.10.2)
+clarifies responsibility for proactive solution research, integrating material
+feedback, and deciding which review findings need action for delivery.
+Existing contracts retain their approvals, findings, budgets, and frozen
+settings until an authorized migration.
 
 ### [Project Docs](https://github.com/junwei529/manage-project-docs)
 **Keep documentation in step with the project.**

@@ -13,14 +13,16 @@
 ### [Work Charter](https://github.com/junwei529/work-charter)
 **让复杂的 AI 项目接得住，也交得出。**
 
-通过关于成果、真实约束、独立审查、恢复和自主推进范围的条件式问答，
-选择 **Direct、Team 或 Phased** 工作方式。
+默认采用 **Direct**，由一位 Deliverer（交付负责人）贯穿工作直至交付。
+多条工作线需要共同目标与优先级时采用 **Phased**；
+规划与执行分离有具体收益时，再选择 **Team**。
 
 保持执行与审查独立，在相关工作间复用可靠 Reviewer，让授权内修复连续推进，
 减少重复审批。模型与推理档位可按实际职责和工作方式配置。
 
-[**v0.9.1**](https://github.com/junwei529/work-charter/releases/tag/v0.9.1)
-支持在稳定工作节点明确迁移，同时保留既有批准、findings、预算和冻结模型设置。
+[**v0.10.2**](https://github.com/junwei529/work-charter/releases/tag/v0.10.2)
+明确主动方案检索的责任、重要反馈的整合方式，以及哪些审查意见需要在本次交付中处理。
+既有合同在获准迁移前，继续保留其批准、findings、预算和冻结设置。
 
 ### [Project Docs](https://github.com/junwei529/manage-project-docs)
 **让项目文档跟得上项目。**
