@@ -1,69 +1,41 @@
 # Eddie Zhou
 
-**English** | [简体中文](https://github.com/junwei529/junwei529/blob/main/README.zh-CN.md)
+**English** | [简体中文](README.zh-CN.md)
 
-**Practical tools for AI-assisted software delivery.**
+I lead strategic planning, investment, and industry research at a large energy company. I also build and maintain long-running projects with coding agents.
 
-I build tools around the everyday challenges of working with AI agents:
-keeping projects moving across conversations, making responsibilities clear,
-keeping documentation useful, and getting commands to execute correctly.
+I work mainly in Codex and Claude Code, and also use DeepSeek Harness and OpenCode. The same model can behave differently across harnesses, so I choose the pair for the task. For architecture work, I sometimes ask different frontier models to assess the same frontend and backend design independently, then compare their findings and proposals.
 
-## Featured Codex Skills
+I built two skills for this way of working.
 
-### [Work Charter](https://github.com/junwei529/work-charter)
-**Keep complex AI projects moving through to delivery.**
+## Work Charter
 
-Start with **Direct**: one Deliverer carries the work through to delivery.
-Use **Phased** when several workstreams need shared goals and priorities;
-choose **Team** when separate planning and execution bring a concrete benefit.
+Work Charter organizes development, review, and delivery across sessions. A single workstream has one owner from implementation through delivery. When several branches or features move in parallel, an orchestrator coordinates priorities, interface dependencies, and integration order. Each workstream advances in its own session.
 
-Keep execution and review independent, reuse a reliable Reviewer across
-related work, and let authorized repairs continue without repeated approval.
-Model and reasoning defaults are configurable by responsibility and arrangement.
+[Work Charter](https://github.com/junwei529/work-charter)
 
-[**v0.10.2**](https://github.com/junwei529/work-charter/releases/tag/v0.10.2)
-clarifies responsibility for proactive solution research, integrating material
-feedback, and deciding which review findings need action for delivery.
-Existing contracts retain their approvals, findings, budgets, and frozen
-settings until an authorized migration.
+## Project Docs
 
-### [Project Docs](https://github.com/junwei529/manage-project-docs)
-**Keep documentation in step with the project.**
+Project Docs keeps the information needed for a handoff in the repository. The project entry point links to current progress, key decisions, and verification records. At the end of a phase, I add verified procedures to the existing guides and update project rules once the changes are agreed. A new agent or harness can pick up from those documents.
 
-Audit, organize, maintain, and recover project documentation.
-Clarify where decisions and current state belong, preserve useful existing
-structures, and help documentation evolve with the software it describes.
+[Project Docs](https://github.com/junwei529/manage-project-docs)
 
-### [Use PowerShell Safely](https://github.com/junwei529/use-powershell-safely)
-**Help AI agents get Windows commands right.**
+## Two private projects
 
-Handle the practical boundaries between PowerShell, native executables,
-text encoding, paths, and WSL. Diagnose failures and verify what a command
-actually completed.
+### Knowledge base
 
-## DeepSeek Harness Plugins
+Document parsing, policy material processing, and retrieval began as separate tools. The project later added charts for official statistics and a wiki. I wanted one workflow for importing scans, organizing policy materials, finding sources, and writing research notes in the wiki, with a dedicated entry point for statistics.
 
-- [Work Charter for DSH](https://github.com/junwei529/work-charter-dsh)
-  — Bring Work Charter 0.9.1's Direct, Team and Phased arrangements,
-  review, acceptance and recovery to native DSH Teams.
-  [v0.2.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.2.0-alpha.1)
-  removes the separate Session Coordinator runtime dependency.
-- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
-  — Retired and archived. Source and old releases remain available for
-  historical profiles; it is no longer a dependency for new WCDP profiles.
+We aligned the entry points and interfaces first, then integrated the modules along real workflows while keeping them independently maintainable. During parallel development, an orchestrator coordinates which interfaces need to be settled first and when the branches can be tested together. When another harness picks up the project, the docs explain why we staged the integration, which part is working, and which module comes next.
 
-WCDP remains a GitHub pre-release targeting DSH 0.1.7-rc.2.
-Its collaboration scope is one native Team; it does not replace arbitrary
-cross-Session coordination. Use fresh profiles/stores and consult the
-repository for installation steps and verification limits.
+### Stock research tools
 
-## How I Build
+This project covers individual stock and portfolio analysis, backtesting, and recording and reviewing trading decisions. Development, data, and source research run in parallel sessions. An orchestrator coordinates the dependencies and deliverables for each phase.
 
-- Start with recurring problems in real projects.
-- Keep tools focused and responsibilities clear.
-- Make results verifiable and interrupted work recoverable.
-- Evaluate defaults, then refine them through actual use.
+The project spans local environments and cloud servers. A handoff needs to identify the local development branch, the version running in the cloud, the data version used for the analysis, and the backup locations. For a backtest, that gives the next agent what it needs to reproduce the original run or test a newer version.
 
-Active projects are maintained independently. Visit its repository for
-documentation, source, releases, and current status.
+## Other tools
 
+**Use PowerShell Safely** helps Codex run and troubleshoot Windows commands. It covers arguments, paths, encodings, and WSL, and checks process exit status and actual output. [Repository](https://github.com/junwei529/use-powershell-safely)
+
+**Work Charter for DeepSeek Harness · Inactive** adapts Work Charter 0.9.1 to native Teams in DeepSeek Harness `0.1.7-rc.2`. Development is paused. The source and pre-release are available for reference. [Repository](https://github.com/junwei529/work-charter-dsh) · [v0.2.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.2.0-alpha.1)

@@ -1,63 +1,41 @@
 # Eddie Zhou
 
-[English](https://github.com/junwei529/junwei529/blob/main/README.md) | **简体中文**
+[English](README.md) | **简体中文**
 
-**让 AI 辅助的软件交付更实用、更可靠。**
+我在一家大型能源企业负责战略规划、投资和产业研究，也用 AI 开发和维护自己的长期项目。
 
-我围绕与 AI Agent 协作时的日常问题构建工具：
-让项目能跨对话持续推进，让分工更清晰，让文档保持有用，
-并帮助命令正确执行。
+我主要使用 Codex 和 Claude Code，也会用 DeepSeek Harness 和 OpenCode。模型在不同 Harness 下的表现有差异，我会按任务选组合。做架构设计时，我会请不同的前沿模型独立评估同一套前后端方案，再对照它们发现的问题和提出的设计建议。
 
-## 重点 Codex Skills
+我为这种工作方式做了两个 Skill。
 
-### [Work Charter](https://github.com/junwei529/work-charter)
-**让复杂的 AI 项目接得住，也交得出。**
+## Work Charter
 
-默认采用 **Direct**，由一位 Deliverer（交付负责人）贯穿工作直至交付。
-多条工作线需要共同目标与优先级时采用 **Phased**；
-规划与执行分离有具体收益时，再选择 **Team**。
+Work Charter 管理跨会话的开发、审查和交付。单条工作线由一位负责人从实现跟到交付。多个分支或功能并行时，由 Orchestrator 协调优先级、接口依赖和集成顺序，各条线在自己的会话里推进。
 
-保持执行与审查独立，在相关工作间复用可靠 Reviewer，让授权内修复连续推进，
-减少重复审批。模型与推理档位可按实际职责和工作方式配置。
+[Work Charter](https://github.com/junwei529/work-charter)
 
-[**v0.10.2**](https://github.com/junwei529/work-charter/releases/tag/v0.10.2)
-明确主动方案检索的责任、重要反馈的整合方式，以及哪些审查意见需要在本次交付中处理。
-既有合同在获准迁移前，继续保留其批准、findings、预算和冻结设置。
+## Project Docs
 
-### [Project Docs](https://github.com/junwei529/manage-project-docs)
-**让项目文档跟得上项目。**
+Project Docs 把接手项目需要的信息留在仓库里。项目入口指向当前进度、关键决定和验证记录。阶段收尾时，把验证过的做法补进原有指南，把已确认的变更写回项目规则。换一个 Agent 或 Harness 时，可以从项目文档恢复上下文。
 
-审计、整理、维护和恢复项目文档。
-明确关键决定与当前状态应记录在哪里，保留已有的有效结构，
-让文档随着软件的实际变化持续更新。
+[Project Docs](https://github.com/junwei529/manage-project-docs)
 
-### [Use PowerShell Safely](https://github.com/junwei529/use-powershell-safely)
-**帮助 AI 在 Windows 上把命令执行对。**
+## 两个非公开项目
 
-处理 PowerShell、原生程序、文本编码、路径和 WSL 之间的实际边界。
-诊断执行失败，并核对命令究竟完成了什么。
+### 知识库
 
-## DeepSeek Harness 插件
+文档解析、政策材料处理和检索最初各自开发，后来又加入了官方统计图表和 Wiki。随着模块增多，我希望能在同一个工作流里导入扫描材料、整理政策、检索资料，再把研究结果写入 Wiki。统计图表保留专用入口。
 
-- [Work Charter for DSH](https://github.com/junwei529/work-charter-dsh)
-  ——基于 DSH 原生 Team，提供 Work Charter 0.9.1 的 Direct、Team、Phased
-  安排，以及审查、验收和恢复机制。
-  [v0.2.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.2.0-alpha.1)
-  已移除独立的 Session Coordinator 运行依赖。
-- [Session Coordinator](https://github.com/junwei529/session-coordinator-dsh)
-  ——已退役并归档。保留源码和旧 release，供历史 profile 查阅与恢复；
-  新 WCDP profile 不再依赖它。
+整合时，我们先统一入口和接口，再沿实际使用流程逐段接入，同时保留模块独立维护的余地。并行开发时，Orchestrator 负责协调哪些接口要先定、各条线什么时候能合起来验证。换到 Claude Code 或其他 Harness 接手时，项目文档要能回答三个问题：**为什么分阶段整合，哪段流程已经跑通，接下来该接哪个模块。**
 
-WCDP 仍为 GitHub 预发布版本，目标 DSH 为 0.1.7-rc.2。
-协作范围限于同一原生 Team，不代表任意独立 Session 的跨会话协调已被替代。
-请使用新的 profile/store，安装步骤与验证限制见项目仓库。
+### 股票研究工具
 
-## 我的开发方式
+项目覆盖个股分析、持仓分析、研究回测，以及交易行为记录和复盘。开发、数据和来源各有一个并行会话，由 Orchestrator 协调不同阶段的依赖和交付。
 
-- 从真实项目中反复出现的问题出发。
-- 保持工具聚焦，让职责清晰。
-- 让结果可以验证，让中断的工作能够恢复。
-- 通过评测确定默认方案，再根据实际使用持续调整。
+项目同时使用本地环境和云服务器。接手一项工作前，需要确认本地开发分支和云端运行版本、这轮分析使用哪一版数据，以及备份放在哪里。比如要复跑一次回测，接手的人得能找到当时的代码和数据版本，再决定是复现原结果，还是用新版本继续验证。
 
-活跃项目独立维护。文档、源码、发布信息和当前状态请查看对应仓库。
+## 其他工具
 
+**Use PowerShell Safely** 是给 Codex 用的 Windows 命令执行和排障 Skill。处理 PowerShell 调用外部程序时的参数、路径、编码和 WSL 问题，也帮助核对进程退出状态和实际输出。 [查看仓库](https://github.com/junwei529/use-powershell-safely)
+
+**Work Charter for DeepSeek Harness · Inactive** 基于 Work Charter 0.9.1，适配 DeepSeek Harness `0.1.7-rc.2` 的原生 Team。暂无后续开发计划，源码和历史预发布版本供参考。 [查看仓库](https://github.com/junwei529/work-charter-dsh) · [v0.2.0-alpha.1](https://github.com/junwei529/work-charter-dsh/releases/tag/v0.2.0-alpha.1)
